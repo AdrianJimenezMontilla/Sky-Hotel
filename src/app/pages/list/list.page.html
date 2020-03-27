@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="title">Lista de hoteles</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list *ngFor="let hotel of hotels | async">
+
+    <img [src]="hotel.imageUrl">
+  
+    <ion-label class="text">{{ hotel.nombre }} <strong>{{ hotel.tipo }}</strong> <strong>{{ hotel.descripcion }}</strong>
+    <strong>{{ hotel.ubicacion }}</strong> <strong>{{ hotel.telefono }}</strong> <strong>{{ hotel.precio }}</strong>
+    </ion-label>
+    <ion-icon name="blank">
+    </ion-icon>
+
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button
+      (click)="addHotel()"
+      color="success">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+
+  </ion-fab>
+
+</ion-content>
+
