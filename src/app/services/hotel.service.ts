@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { Hotel } from '../model/hotel';
 import { AngularFirestore, DocumentReference } from '@angular/fire/firestore';
 import { map } from 'rxjs/operators';
+import { User } from '../model/user';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +15,11 @@ export class HotelService {
   public addHotel(hotel: Hotel): Promise<DocumentReference> {
     return this.db.collection<Hotel>('hotels').add(hotel);
   }
+
+  public addUser(user: User): Promise<DocumentReference> {
+    return this.db.collection<User>('users').add(user);
+  }
+
 
   public getHotels(): Observable<Hotel[]> {
     return this.db.collection('hotels').snapshotChanges().pipe(

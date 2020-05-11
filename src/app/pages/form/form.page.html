@@ -1,9 +1,110 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>form</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="list"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ pageTitle }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding">
 
+  <ion-list>
+
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input
+        readonly="readonly"
+        clearInput
+        class="text"
+        [(ngModel)]="hotel.nombre">
+      </ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label position="floating">Tipo</ion-label>
+      <ion-input
+        readonly="readonly"
+        clearInput
+        class="text"
+        [(ngModel)]="hotel.tipo">
+      </ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label position="floating">Descripcion</ion-label>
+      <ion-input
+        readonly="readonly"
+        clearInput
+        class="text"
+        [(ngModel)]="hotel.descripcion">
+      </ion-input>
+    </ion-item>
+
+
+
+    <ion-item>
+      <ion-label position="floating">Ubicacion</ion-label>
+      <ion-input
+        readonly="readonly"
+        clearInput
+        class="text"
+        [(ngModel)]="hotel.ubicacion">
+      </ion-input>
+    </ion-item>
+
+
+
+
+    <ion-item>
+      <ion-label position="floating">Telefono</ion-label>
+      <ion-input
+        readonly="readonly"
+        clearInput
+        class="text"
+        [(ngModel)]="hotel.telefono">
+      </ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label position="floating">Precio</ion-label>
+      <ion-input
+        readonly="readonly"
+        clearInput
+        class="text"
+        [(ngModel)]="hotel.precio">
+      </ion-input>
+    </ion-item>
+
+
+
+
+
+  </ion-list>
+  
+  <ion-button 
+    expand="block"
+    class="text"
+    color="secondary"
+    shape="round"
+    (click)="addHotel()">
+    Guardar
+  </ion-button>
+
+
+  <ion-button
+    expand="block"
+    class="text"
+    color="secondary"
+    shape="round"
+    href="/">
+    Cancelar
+  </ion-button>
+
+
+
+  
 </ion-content>

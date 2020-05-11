@@ -1,5 +1,8 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
     <ion-title class="title">Lista de hoteles</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -7,24 +10,16 @@
 <ion-content class="ion-padding">
   <ion-list *ngFor="let hotel of hotels | async">
 
-    <img [src]="hotel.imageUrl">
+    <img [src]="hotel.imageUrl" (click)="goEditHotel(hotel.hotelId)" >
   
-    <ion-label class="text">{{ hotel.nombre }} <strong>{{ hotel.tipo }}</strong> <strong>{{ hotel.descripcion }}</strong>
-    <strong>{{ hotel.ubicacion }}</strong> <strong>{{ hotel.telefono }}</strong> <strong>{{ hotel.precio }}</strong>
+    <ion-label class="text"><strong>{{ hotel.nombre }}</strong><br> <strong>{{ hotel.tipo }}</strong><br> <strong>{{ hotel.descripcion }}</strong>
+    <strong><br>{{ hotel.ubicacion }}</strong><br> <strong>{{ hotel.telefono }}</strong><br> <strong>{{ hotel.precio }}</strong>
     </ion-label>
-    <ion-icon name="blank">
-    </ion-icon>
+    <ion-icon name="close-circle" (click)="hotelService.deleteHotelById(hotel.hotelId)"></ion-icon> 
 
   </ion-list>
 
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button
-      (click)="addHotel()"
-      color="success">
-      <ion-icon name="add"></ion-icon>
-    </ion-fab-button>
-
-  </ion-fab>
+ 
 
 </ion-content>
 

@@ -11,11 +11,28 @@ import { Router } from '@angular/router';
 })
 export class ListPage implements OnInit {
 
+
+
   hotels: Observable<Hotel[]>;
-  constructor(private hotelService: HotelService) { this.hotels = this.hotelService.getHotels(); }
-  ngOnInit() { }
-  addHotel() { const hotel = { nombre: 'Posadas España', tipo: '4 Estrellas', descripcion: 'Hotel en el PTA', 
-   imageUrl: 'https://q-cf.bstatic.com/images/hotel/max1024x768/134/13410696.jpg',
-   ubicacion: 'Campanillas, Malaga', telefono: '952434543', precio:'50' }
-  this.hotelService.addHotel(hotel);}
+
+
+  constructor(private hotelService: HotelService, private router: Router,  ) { 
+    
+    this.hotels = this.hotelService.getHotels(); 
+  
   }
+
+  ngOnInit() { }
+
+
+  addHotel() { 
+
+    this.router.navigateByUrl('/create-hotel');
+    
+  }
+
+  goEditHotel(id: string) {
+    this.router.navigateByUrl('edit-hotel/' + id);
+
+  }
+}

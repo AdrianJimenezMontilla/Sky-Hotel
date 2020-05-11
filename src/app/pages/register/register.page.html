@@ -1,9 +1,62 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>register</ion-title>
+
+    <ion-title class="title">Nuevo usuario</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-row>
+      <ion-col text-center>
+        <img src="../assets/unnamed.png">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
+  <ion-list>
+      <ion-item>
+        <ion-label text-center position="floating">Nombre</ion-label>
+        <ion-input text-center clearInput class="text" [(ngModel)]="user.nombre">
+        </ion-input>
+      </ion-item>
+    <ion-item>
+        <ion-label text-center position="floating">Apellidos</ion-label>
+        <ion-input text-center clearInput class="text" [(ngModel)]="user.apellidos">
+        </ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label text-center position="floating">Nombre de Usuario</ion-label>
+        <ion-input text-center clearInput class="text" [(ngModel)]="user.nombreUsuario">
+        </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label text-center position="floating">Correo electrónico</ion-label>
+      <ion-input text-center clearInput class="text" [(ngModel)]="email">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label text-center position="floating">Contraseña</ion-label>
+      <ion-input text-center class="text" type="password" [(ngModel)]="password">
+      </ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button
+    expand="block"
+    class="text capitalize"
+    color="secondary"
+    shape="round"
+    (click)="createUser()">
+    Aceptar
+  </ion-button>
+
+  <ion-button
+    expand="block"
+    class="text capitalize"
+    color="secondary"
+    shape="round"
+    href="/login">
+    Cancelar
+  </ion-button>
 </ion-content>
