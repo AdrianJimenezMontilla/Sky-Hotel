@@ -72,3 +72,7 @@ Visual Studio Code para la realización del contenido de la aplicación. Firebas
 
 Explicacion en video:
 https://www.youtube.com/watch?v=ftNao3N1Ehk&feature=youtu.be
+--------------------------------------------------------------------------------------------------------------------------------------
+
+
+
