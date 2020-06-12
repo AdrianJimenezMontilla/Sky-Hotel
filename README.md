@@ -89,7 +89,8 @@ Visual Studio Code para la realización del contenido de la aplicación. Firebas
 Explicacion en video:
 https://www.youtube.com/watch?v=ftNao3N1Ehk&feature=youtu.be
 --------------------------------------------------------------------------------------------------------------------------------------
-
+12/06//220
+-
 Presentación de la APP
 -
 Bienvenidos a mi repositorio, quiero presentaros Sky Hotel, una aplicación de hoteles donde podremos compartir nuestra opinión sobre ciertos hoteles con el resto de usuarios de la APP, empezamos!
