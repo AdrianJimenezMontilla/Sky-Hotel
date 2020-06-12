@@ -38,7 +38,15 @@ Comentarios totalmente implementados, cada hotel tendra su comentario, su precio
 
 (29/05/2020)
 
-Perfil de usuario con datos sobre el usuario y agregado en la pagina principal un select para filtrar los hoteles según la ciudad de donde sean, y tocando la aplicación de escritorio de administración, aplicación que solo tendra el usuario y que podra borrar, editar o crear los hoteles de la app
+Perfil de usuario con datos sobre el usuario y agregado en la pagina principal un select para filtrar los hoteles según la ciudad de donde sean, y tocando la aplicación de escritorio de administración, aplicación que solo tendra el usuario y que podra borrar, editar o crear los hoteles de la app.
+
+(05/06/2020)
+
+Terminada la APP de administración y terminando landing page.
+
+(12/06/2020)
+
+Subiendo y ordenando todo un poco a GitHub
 
 Bibliografía: https://ionicframework.com/docs/native/firebase y capitulo 11 del libro Aprende Ionic con ejercicios de Luis José Sanchez.
 
