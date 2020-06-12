@@ -102,6 +102,7 @@ En la carpeta APK está el archivo para quien quiera probarla.
 VIDEO DE LA APP
 -
 https://youtu.be/Zz5Hcf9wKZU
+-
 
 LANDING PAGE DE LA APP
 -
