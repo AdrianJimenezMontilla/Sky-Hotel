@@ -46,14 +46,14 @@ Terminada la APP de administración y terminando landing page.
 
 (12/06/2020)
 
-Subiendo y ordenando todo un poco a GitHub
+Subiendo y ordenando todo un poco a GitHub.
 
 Bibliografía: https://ionicframework.com/docs/native/firebase y capitulo 11 del libro Aprende Ionic con ejercicios de Luis José Sanchez.
 
 Descripción del Proyecto
 Esta aplicación esta orientada a la gente que quiere puntuar y dar su opinion sobre el servicio de distintos hoteles.
 
-El usuario puede ver información de los distintos hoteles y puntuarlo
+El usuario puede ver información de los distintos hoteles y puntuarlo.
 
 Objetivo y público
 El objetivo de esta aplicación es que los usuarios puedan puntuar y dar su opinion en los distintos hoteles para que otros usuarios sepan si es una buena inversion pasar la noche en dicho hotel.
@@ -68,8 +68,6 @@ Para esta aplicación se van a utilizar estos medios:
 
 Visual Studio Code para la realización del contenido de la aplicación. Firebase para la administración de la base de datos. Ionic
 
-Link a la aplicación hecha en android, aunque sin las mejoras que estan pensadas hacer.
-https://github.com/AdrianJimenezMontilla/Govatri-hotel-v2
 
 Explicacion en video:
 https://www.youtube.com/watch?v=ftNao3N1Ehk&feature=youtu.be
