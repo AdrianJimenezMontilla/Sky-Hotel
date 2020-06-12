@@ -89,7 +89,7 @@ Visual Studio Code para la realización del contenido de la aplicación. Firebas
 Explicacion en video:
 https://www.youtube.com/watch?v=ftNao3N1Ehk&feature=youtu.be
 --------------------------------------------------------------------------------------------------------------------------------------
-12/06//220
+12/06/220
 -
 Presentación de la APP
 -
