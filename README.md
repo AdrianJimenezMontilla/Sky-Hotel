@@ -102,6 +102,13 @@ VIDEO DE LA APP
 -
 https://youtu.be/Zz5Hcf9wKZU
 
+SKY-HOTEL-ADMIN
+-
+Entra al siguiente repositorio!
+
+https://github.com/AdrianJimenezMontilla/Sky-Hotel-Admin
+-
+
 ENSEÑANDO LA APP
 -
 ![Aquí la descripción de la imagen por si no carga](https://github.com/AdrianJimenezMontilla/Sky-Hotel/blob/master/imagen/5.png)
@@ -147,4 +154,11 @@ Si hacemos clic en la "foto" se abrirá la cámara para tomar nuestra foto de pe
 ![Aquí la descripción de la imagen por si no carga](https://github.com/AdrianJimenezMontilla/Sky-Hotel/blob/master/imagen/15.png)
 
 Y listo! ahi la tenemos.
+
+Pero aqui no termina la cosa, a continuación, veremos Sky Hotel del administrador, en el siguiente repositorio!
+Sky-Hotel-Admin
+---
+https://github.com/AdrianJimenezMontilla/Sky-Hotel-Admin
+--
+
 
