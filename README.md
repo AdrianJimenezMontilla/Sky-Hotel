@@ -106,6 +106,7 @@ https://youtu.be/Zz5Hcf9wKZU
 
 LANDING PAGE DE LA APP
 -
+Entra al siguiente repositorio!
 https://github.com/AdrianJimenezMontilla/Sky-Hotel-Landing-Page
 -
 
