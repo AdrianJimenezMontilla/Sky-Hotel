@@ -102,6 +102,11 @@ VIDEO DE LA APP
 -
 https://youtu.be/Zz5Hcf9wKZU
 
+LANDING PAGE DE LA APP
+-
+https://github.com/AdrianJimenezMontilla/Sky-Hotel-Landing-Page
+-
+
 SKY-HOTEL-ADMIN
 -
 Entra al siguiente repositorio!
@@ -160,5 +165,11 @@ Sky-Hotel-Admin
 ---
 https://github.com/AdrianJimenezMontilla/Sky-Hotel-Admin
 --
+
+Y no te olvides de visitar la landing page de Sky Hotel!
+Landing Page
+-
+https://github.com/AdrianJimenezMontilla/Sky-Hotel-Landing-Page
+-
 
 
