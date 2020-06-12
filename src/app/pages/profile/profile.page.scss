@@ -6,19 +6,38 @@
     text-align: center;
     margin-left: 100px;
 }
-
+.ion-padding {
+    margin-left: 0px;
+}
 
 #titulo {
-background-color: #17408B;
 font-size: 40px;
 font-family: Papyrus;
 
 }
 
-#cuerpo {
-background-color: #17408B;
+.cuerpo {
+text-align: center;
+
+
+
 }
 
 #defecto {
 margin-left: 130px;
 }
+ion-list{
+    --ion-background-color:#90EE90;
+    
+    opacity: 0.8;
+    
+   
+    
+ }
+ion-item{
+    --ion-background-color:#ADD8E6;
+    opacity:0.8 ;
+    
+ }
+ ion-content {
+    --background: url('/assets/fondo.jpg') no-repeat ;}

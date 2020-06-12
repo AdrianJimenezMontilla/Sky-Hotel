@@ -14,6 +14,7 @@ export class ListPage implements OnInit {
 
 
   hotels: Observable<Hotel[]>;
+  ciudad: string = ''
 
 
   constructor(private hotelService: HotelService, private router: Router,  ) { 

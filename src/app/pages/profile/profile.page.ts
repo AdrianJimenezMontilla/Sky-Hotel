@@ -4,6 +4,10 @@ import { SafeResourceUrl } from '@angular/platform-browser';
 import { CameraService } from 'src/app/services/camera.service';
 import { PhotoService } from 'src/app/services/photo.service';
 import { AuthService } from 'src/app/services/auth.service';
+import { Observable } from 'rxjs';
+import { User } from 'src/app/model/user';
+import { HotelService } from 'src/app/services/hotel.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-profile',
@@ -12,13 +16,21 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class ProfilePage {
 
+  users: Observable<User[]>;
+  userId: string;
   photoPaths: SafeResourceUrl[] = [];
   
-  constructor(
+  constructor(private hotelService: HotelService,
     private cameraService: CameraService,
     private photoService: PhotoService,
-    private authService: AuthService
-  ) {}
+    private authService: AuthService,
+    private userService: UserService
+  ) {
+    this.authService.getCurrentUser().subscribe(
+      data => this.userId = data.uid
+    );
+    this.users = this.hotelService.getUsers(); 
+  }
 
   async takePicture() {
     const photoPath = await this.cameraService.takePicture();

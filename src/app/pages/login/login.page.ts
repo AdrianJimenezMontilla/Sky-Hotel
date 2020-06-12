@@ -12,7 +12,7 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-
+  spinner: boolean = false;
   email: string;
   password: string;
 
@@ -22,6 +22,7 @@ export class LoginPage implements OnInit {
   }
 
   async login() {
+    this.spinner = true;
     try {
       await this.authService.login(this.email, this.password);
       this.router.navigateByUrl('/list');

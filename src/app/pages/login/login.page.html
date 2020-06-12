@@ -1,30 +1,31 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title class="title">Login</ion-title>
+    <ion-title class="title" id="titulo">Login</ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content class="ion-padding">
+
   <ion-grid>
     <ion-row>
-      <ion-col text-center>
-        <ion-icon name="contact" class="person" align-self-center></ion-icon>
+      <ion-col text-center id="imagen">
+        <img src="../assets/logo2.svg">
       </ion-col>
     </ion-row>
   </ion-grid>
 
-  <ion-list>
+  <ion-list id="contenedor">
     <ion-item>
-      <ion-label text-center position="floating">Correo electrónico</ion-label>
+      <ion-label text-center position="floating" class="text">Correo electrónico</ion-label>
       <ion-input text-center clearInput class="text" [(ngModel)]="email">
       </ion-input>
     </ion-item>
     <ion-item>
-      <ion-label text-center position="floating">Contraseña</ion-label>
+      <ion-label text-center position="floating" class="text">Contraseña</ion-label>
       <ion-input text-center class="text" type="password" [(ngModel)]="password">
       </ion-input>
     </ion-item>
   </ion-list>
+
 
   <ion-button
     expand="block"
@@ -34,6 +35,10 @@
     (click)="login()">
     Aceptar
   </ion-button>
+
+  <div id="spinner">
+  <ion-spinner class="bubbles" *ngIf="spinner == true"></ion-spinner>
+  </div>
 
   <br>
   <div class="center">

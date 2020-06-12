@@ -3,21 +3,45 @@
     <ion-buttons slot="end">
       <ion-menu-button menu="main-menu"></ion-menu-button>
     </ion-buttons>
-    <ion-title class="title">Lista de hoteles</ion-title>
+    <ion-title class="title">Hoteles {{ ciudad }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
-  <ion-list *ngFor="let hotel of hotels | async">
-
+<div>
+  <ion-item>
+    <ion-label>Ciudad</ion-label>
+    <ion-select placeholder="Select One" [(ngModel)]="ciudad">>
+      <ion-select-option value="Malaga">Malaga</ion-select-option>
+      <ion-select-option value="Sevilla">Sevilla</ion-select-option>
+      <ion-select-option value="Cordoba">Cordoba</ion-select-option>
+      <ion-select-option value="Jaen">Jaen</ion-select-option>
+      <ion-select-option value="Huelva">Huelva</ion-select-option>
+      <ion-select-option value="Cadiz">Cadiz</ion-select-option>
+      <ion-select-option value="Granada">Granada</ion-select-option>
+      
+    </ion-select>
+  </ion-item>
+</div>
+  
+  <div *ngFor="let hotel of hotels | async">
+  <ion-list *ngIf="hotel.ubicacion == ciudad">
+    <ion-item><strong>{{ hotel.nombre }}</strong></ion-item>
+    <ion-item>
     <img [src]="hotel.imageUrl" (click)="goEditHotel(hotel.hotelId)" >
   
     <ion-label class="text"><strong>{{ hotel.nombre }}</strong><br> <strong>{{ hotel.tipo }}</strong><br> <strong>{{ hotel.descripcion }}</strong>
-    <strong><br>{{ hotel.ubicacion }}</strong><br> <strong>{{ hotel.telefono }}</strong><br> <strong>{{ hotel.precio }}</strong>
+    <strong><br>{{ hotel.ubicacion }}</strong><br> <strong>{{ hotel.telefono }}</strong><br> 
     </ion-label>
-    <ion-icon name="close-circle" (click)="hotelService.deleteHotelById(hotel.hotelId)"></ion-icon> 
+    </ion-item>
+    <ion-item>
+    
+    </ion-item>
+
 
   </ion-list>
+  </div>
+
 
  
 

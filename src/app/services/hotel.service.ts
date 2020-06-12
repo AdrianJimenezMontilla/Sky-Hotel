@@ -4,6 +4,7 @@ import { Hotel } from '../model/hotel';
 import { AngularFirestore, DocumentReference } from '@angular/fire/firestore';
 import { map } from 'rxjs/operators';
 import { User } from '../model/user';
+import { Comentario } from '../model/comentario';
 
 @Injectable({
   providedIn: 'root'
@@ -19,8 +20,17 @@ export class HotelService {
   public addUser(user: User): Promise<DocumentReference> {
     return this.db.collection<User>('users').add(user);
   }
-
-
+  
+  public getUsers(): Observable<User[]> {
+    return this.db.collection('users').snapshotChanges().pipe(
+      map(actions => actions.map(a => {
+        const data = a.payload.doc.data() as User;
+        const userId = a.payload.doc.id;
+        return { userId, ...data };
+      }))
+    );
+  }
+  
   public getHotels(): Observable<Hotel[]> {
     return this.db.collection('hotels').snapshotChanges().pipe(
       map(actions => actions.map(a => {

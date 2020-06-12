@@ -9,13 +9,13 @@
   <ion-grid>
     <ion-row>
       <ion-col text-center>
-        <img src="../assets/unnamed.png">
+        <img src="../assets/usuario1.svg" id="foto">
       </ion-col>
     </ion-row>
   </ion-grid>
 
-  <ion-list>
-      <ion-item>
+  <ion-list id="contenedor">
+      <ion-item id="item">
         <ion-label text-center position="floating">Nombre</ion-label>
         <ion-input text-center clearInput class="text" [(ngModel)]="user.nombre">
         </ion-input>
@@ -35,14 +35,21 @@
       <ion-input text-center clearInput class="text" [(ngModel)]="email">
       </ion-input>
     </ion-item>
-    <ion-item>
+  <ion-item>
       <ion-label text-center position="floating">Contraseña</ion-label>
-      <ion-input text-center class="text" type="password" [(ngModel)]="password">
+      <ion-input text-center class="text" [type]="passwordType" [(ngModel)]="password">
+      </ion-input>
+      <ion-icon name="eye" color="gray" (click)="togglePassword()"> </ion-icon>
+    </ion-item>
+        <ion-item>
+      <ion-label text-center position="floating">Repita la contraseña</ion-label>
+      <ion-input text-center class="text" [type]="passwordType" [(ngModel)]="password2">
       </ion-input>
     </ion-item>
+  
   </ion-list>
 
-  <ion-button
+  <ion-button *ngIf="password == password2"
     expand="block"
     class="text capitalize"
     color="secondary"
@@ -50,6 +57,10 @@
     (click)="createUser()">
     Aceptar
   </ion-button>
+
+  <p id="spinner">
+  <ion-spinner class="bubbles" *ngIf="spinner == true"></ion-spinner>
+  </p>
 
   <ion-button
     expand="block"

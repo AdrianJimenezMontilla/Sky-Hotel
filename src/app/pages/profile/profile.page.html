@@ -3,13 +3,13 @@
         <ion-buttons slot="end">
       <ion-menu-button menu="main-menu"></ion-menu-button>
     </ion-buttons>
-    <ion-title id="titulo"><font color="white">Foto de perfil</font></ion-title>
+    <ion-title class="title">Perfil</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <p *ngIf="photoService.getPhotos().length === 0" class="ion-padding">
-    <img (click)="takePicture()" id="defecto" src="../assets/unnamed.png">
+    <img (click)="takePicture()" id="defecto" src="../assets/usuario1.svg">
   </p>
   
   <ion-list lines="none">
@@ -26,6 +26,33 @@
         </ion-item-option>
       </ion-item-options>
     </ion-item-sliding>
+
+
   </ion-list>
+  <div class="cuerpo" *ngFor="let user of users | async">
+    <ion-list *ngIf="user.idUsuario == userId">
+      
+      <ion-label><strong> Nombre: </strong></ion-label>
+      <p > <font color="red">{{user.nombre}} </font>
+      </p>
+      <ion-item></ion-item>
+      <ion-label><strong> Apellidos:</strong> </ion-label>
+      
+      <p><font color="red"> {{user.apellidos}}</font> </p>
+      <ion-item></ion-item>
+      <ion-label><strong> Nombre Usuario:</strong> </ion-label>
+     
+      <p><font color="red"> {{user.nombreUsuario}}</font> </p>
+      <ion-item></ion-item>
+      
+      
+      
+    </ion-list>
+  </div>
+  
+
+
+
+  
   
 </ion-content>

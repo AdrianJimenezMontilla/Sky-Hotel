@@ -24,7 +24,31 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+:root,
+:root[mode=ios],
+:root[mode=md] {
+  --ion-font-family: "Palatino", "Times New Roman", serif !important;
 
+  font-family: "Palatino", "Times New Roman", serif !important;
+}
 
-.title { text-align: center; font-family: 'Pacifico', cursive; font-size: 2em; }
+.title {
+  text-align: center;
+  font-family: 'League Spartan';
+  font-size: 1.5em;
+  background-color: #ADD8E6
+  ;
+}
+
+.text {
+    font-family: 'Papyrus';
+    font-weight: 100;
+    font-size: 1;
+  }
+
+  ion-menu{
+    --width: 100%;
+    --background: #000052;
+  }
+
 

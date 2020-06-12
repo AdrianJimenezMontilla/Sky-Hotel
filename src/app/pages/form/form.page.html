@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="list"></ion-back-button>
     </ion-buttons>
-    <ion-title>{{ pageTitle }}</ion-title>
+    <ion-title class="title">{{ pageTitle }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -12,7 +12,7 @@
   <ion-list>
 
     <ion-item>
-      <ion-label position="floating">Nombre</ion-label>
+      <ion-label position="floating"><strong>Nombre</strong></ion-label>
       <ion-input
         readonly="readonly"
         clearInput
@@ -23,7 +23,7 @@
 
 
     <ion-item>
-      <ion-label position="floating">Tipo</ion-label>
+      <ion-label position="floating"><strong>Tipo</strong></ion-label>
       <ion-input
         readonly="readonly"
         clearInput
@@ -34,7 +34,7 @@
 
 
     <ion-item>
-      <ion-label position="floating">Descripcion</ion-label>
+      <ion-label position="floating"><strong>Descripcion</strong></ion-label>
       <ion-input
         readonly="readonly"
         clearInput
@@ -46,7 +46,7 @@
 
 
     <ion-item>
-      <ion-label position="floating">Ubicacion</ion-label>
+      <ion-label position="floating"><strong>Ubicacion</strong></ion-label>
       <ion-input
         readonly="readonly"
         clearInput
@@ -59,7 +59,7 @@
 
 
     <ion-item>
-      <ion-label position="floating">Telefono</ion-label>
+      <ion-label position="floating"><strong>Telefono</strong></ion-label>
       <ion-input
         readonly="readonly"
         clearInput
@@ -69,40 +69,126 @@
     </ion-item>
 
 
-    <ion-item>
-      <ion-label position="floating">Precio</ion-label>
-      <ion-input
-        readonly="readonly"
-        clearInput
-        class="text"
-        [(ngModel)]="hotel.precio">
-      </ion-input>
-    </ion-item>
-
-
-
 
 
   </ion-list>
+  <br>
+  <ion-item><strong> Comparte tu comentario: </strong></ion-item>
+ 
+
   
-  <ion-button 
-    expand="block"
-    class="text"
-    color="secondary"
-    shape="round"
-    (click)="addHotel()">
-    Guardar
+  <div *ngFor="let user of users | async">
+    <ion-list *ngIf="user.idUsuario == userId">
+
+      <ion-item>
+      <ion-label> Validar Usuario </ion-label>
+      <ion-select placeholder="{{user.nombreUsuario}}" [(ngModel)]="comentario.usuario" interface="popover" >
+      <ion-select-option  selected value="{{user.nombreUsuario}}">{{user.nombreUsuario}}</ion-select-option>
+
+      </ion-select>
+      
+
+      
+      </ion-item>
+
+      
+    </ion-list>
+  </div>
+<div>
+<div>
+
+  <ion-list>
+    <ion-item>
+      <ion-label> Puntuación</ion-label>
+      <ion-select [(ngModel)]="comentario.puntua">
+      <ion-select-option value="1">1</ion-select-option>
+      <ion-select-option value="2">2</ion-select-option>
+      <ion-select-option value="3">3</ion-select-option>
+      <ion-select-option value="4">4</ion-select-option>
+      <ion-select-option value="5">5</ion-select-option>
+      </ion-select>
+        
+    </ion-item>
+
+        <ion-item>
+      <ion-label position="floating">Comentario</ion-label>
+      <ion-input
+        clearInput
+        class="text"
+        [(ngModel)]="comentario.comenta">
+      </ion-input>
+    </ion-item>
+
+        <ion-item>
+      <ion-label position="floating">Precio medio</ion-label>
+      <ion-input
+        type="number"
+        clearInput
+        class="text"
+        [(ngModel)]="comentario.precioMedio">
+      </ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button (click)="addComentario()"> Enviar
   </ion-button>
+</div>
+<br>
+  <ion-item><strong> Reviews de nuestros usuarios: </strong></ion-item>
+  <div>
+  <ion-list *ngFor="let comentario of comentarios | async">
+
+    <ion-item > <strong> USUARIO:  </strong> {{ comentario.usuario }}
+    <br>
+    </ion-item>
+    <ion-item *ngIf="comentario.puntua == 5"><strong> PUNTUACIÓN: </strong>
+    <br>
+    <ion-icon name="star-outline" color="warning"></ion-icon>
+    <ion-icon name="star-outline" color="warning"></ion-icon>
+    <ion-icon name="star-outline" color="warning"></ion-icon>
+    <ion-icon name="star-outline" color="warning"></ion-icon>
+    <ion-icon name="star-outline" color="warning"></ion-icon>
+    </ion-item>
+    <ion-item *ngIf="comentario.puntua == 4"> <strong> PUNTUACIÓN: </strong>
+    <br>
+    <ion-icon name="star-outline" color="warning"></ion-icon>
+    <ion-icon name="star-outline" color="warning"></ion-icon>
+    <ion-icon name="star-outline" color="warning"></ion-icon>
+    <ion-icon name="star-outline" color="warning"></ion-icon>
+    </ion-item>
+    <ion-item *ngIf="comentario.puntua == 3"><strong> PUNTUACIÓN:</strong>
+    <br>
+    <ion-icon name="star-outline" color="warning"></ion-icon>
+    <ion-icon name="star-outline" color="warning"></ion-icon>
+    <ion-icon name="star-outline" color="warning"></ion-icon>
+    </ion-item>
+    <ion-item *ngIf="comentario.puntua == 2"><strong> PUNTUACIÓN: </strong>
+    <br>
+    <ion-icon name="star-outline" color="warning"></ion-icon>
+    <ion-icon name="star-outline" color="warning"></ion-icon>
+    </ion-item>
+    <ion-item *ngIf="comentario.puntua == 1"><strong> PUNTUACIÓN: </strong>
+    <br>
+    <ion-icon name="star-outline" color="warning"></ion-icon>
+    </ion-item>
+    <ion-item > <strong> COMENTARIO:  </strong> {{ comentario.comenta }}
+    <br>
+    </ion-item>
+    <ion-item > <strong> PRECIO MEDIO:  </strong>
+    <br>
+      <ion-label> {{ comentario.precioMedio }} </ion-label>
+
+    </ion-item>
 
 
-  <ion-button
-    expand="block"
-    class="text"
-    color="secondary"
-    shape="round"
-    href="/">
-    Cancelar
-  </ion-button>
+  </ion-list>
+  </div>
+</div>
+
+
+
+
+
 
 
 
