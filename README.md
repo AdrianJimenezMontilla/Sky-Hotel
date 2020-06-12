@@ -140,11 +140,11 @@ Tendremos un menu de hamburguesa con las siguientes opciones, lista de hoteles n
 
 Nos saldra el Nombre, Apellidos y Nombre de usuarios de nuestra cuenta.
 
-![Aquí la descripción de la imagen por si no carga](https://github.com/AdrianJimenezMontilla/Sky-Hotel/blob/master/imagen/5.png)
+![Aquí la descripción de la imagen por si no carga](https://github.com/AdrianJimenezMontilla/Sky-Hotel/blob/master/imagen/14.png)
 
 Si hacemos clic en la "foto" se abrirá la cámara para tomar nuestra foto de perfil.
 
-![Aquí la descripción de la imagen por si no carga](https://github.com/AdrianJimenezMontilla/Sky-Hotel/blob/master/imagen/5.png)
+![Aquí la descripción de la imagen por si no carga](https://github.com/AdrianJimenezMontilla/Sky-Hotel/blob/master/imagen/15.png)
 
 Y listo! ahi la tenemos.
 
