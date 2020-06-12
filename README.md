@@ -1,4 +1,5 @@
 Sky Hotel
+-
 
 Histórico semanal
 (20/03/2020)
