@@ -116,3 +116,35 @@ Con poner nuestro correo nos llegara el correo para recuperar nuestra contraseñ
 
 Rellenamos los datos para crearnos una cuenta, las contraseñas deben ser iguales o no podremos darle al botón de aceptar, haciendo clic en el ojo podremos ver lo que estamos escribiendo. Una vez hecho nos saldra un spinner indicando que todo va bien y estamos creando la contraseña
 
+![Aquí la descripción de la imagen por si no carga](https://github.com/AdrianJimenezMontilla/Sky-Hotel/blob/master/imagen/8.png)
+
+Una vez dentro nos saldra un filtro para filtrar los hoteles por ciudades, podemos elegir Malaga por ejemplo.
+
+![Aquí la descripción de la imagen por si no carga](https://github.com/AdrianJimenezMontilla/Sky-Hotel/blob/master/imagen/9.png)
+
+Aparecerán los hoteles de Malaga, le daremos a Posadas de España por ejemplo.
+
+![Aquí la descripción de la imagen por si no carga](https://github.com/AdrianJimenezMontilla/Sky-Hotel/blob/master/imagen/10.png)
+
+Nos saldra la siguiente información del hotel, junto a una caja de comentarios donde podremos darle nuestra puntuación, lo que nos costo y nuestra opinión.
+
+![Aquí la descripción de la imagen por si no carga](https://github.com/AdrianJimenezMontilla/Sky-Hotel/blob/master/imagen/11.png)
+
+Una vez introducidos, se agregarán al hotel dicha opinión, empieza a compartir tu experiencia!
+
+![Aquí la descripción de la imagen por si no carga](https://github.com/AdrianJimenezMontilla/Sky-Hotel/blob/master/imagen/12.png)
+
+Tendremos un menu de hamburguesa con las siguientes opciones, lista de hoteles nos regresa a la pantalla principal, desloguear nos saca de nuestra cuenta de usuario, veamos la de Perfil.
+
+![Aquí la descripción de la imagen por si no carga](https://github.com/AdrianJimenezMontilla/Sky-Hotel/blob/master/imagen/13.png)
+
+Nos saldra el Nombre, Apellidos y Nombre de usuarios de nuestra cuenta.
+
+![Aquí la descripción de la imagen por si no carga](https://github.com/AdrianJimenezMontilla/Sky-Hotel/blob/master/imagen/5.png)
+
+Si hacemos clic en la "foto" se abrirá la cámara para tomar nuestra foto de perfil.
+
+![Aquí la descripción de la imagen por si no carga](https://github.com/AdrianJimenezMontilla/Sky-Hotel/blob/master/imagen/5.png)
+
+Y listo! ahi la tenemos.
+
