@@ -108,11 +108,11 @@ ENSEÑANDO LA APP
 
 La pantalla de login, nada mas abrir la APP, tendremos las opciones abajo de Recuperar la contraseña y de crearnos una cuenta!
 
-https://github.com/AdrianJimenezMontilla/Sky-Hotel/blob/master/imagen/6.png
+![Aquí la descripción de la imagen por si no carga](https://github.com/AdrianJimenezMontilla/Sky-Hotel/blob/master/imagen/6.png)
 
 Con poner nuestro correo nos llegara el correo para recuperar nuestra contraseña.
 
-https://github.com/AdrianJimenezMontilla/Sky-Hotel/blob/master/imagen/7.png
+![Aquí la descripción de la imagen por si no carga](https://github.com/AdrianJimenezMontilla/Sky-Hotel/blob/master/imagen/7.png)
 
 Rellenamos los datos para crearnos una cuenta, las contraseñas deben ser iguales o no podremos darle al botón de aceptar, haciendo clic en el ojo podremos ver lo que estamos escribiendo. Una vez hecho nos saldra un spinner indicando que todo va bien y estamos creando la contraseña
 
